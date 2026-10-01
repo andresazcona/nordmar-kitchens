@@ -11,6 +11,8 @@ Built with React and plain CSS — no animation libraries, no canvas, no WebGL.
 ![Dependencies](https://img.shields.io/badge/runtime_deps-react_only-2ea44f)
 ![Bundle](https://img.shields.io/badge/JS-74_kB_gzip-c4a574)
 
+### [**→ Live demo**](https://andresazcona.github.io/nordmar-kitchens/)
+
 <img src="docs/screenshots/02-hero-assembling.jpg" alt="The kitchen assembling inside the empty room as the user scrolls" width="100%" />
 
 </div>

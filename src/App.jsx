@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 
+// Public assets respect Vite's base (GitHub Pages serves under /nordmar-kitchens/).
+const A = `${import.meta.env.BASE_URL}assets/`
+
 const MATERIALS = [
   {
     id: 'walnut',
     name: 'Nogal & Jura',
-    img: '/assets/mat-walnut.jpg',
+    img: A + 'mat-walnut.jpg',
     swatch: ['#5a3b26', '#d9cbb3'],
     cabinets: 'Nogal americano',
     stone: 'Caliza Jura',
@@ -13,7 +16,7 @@ const MATERIALS = [
   {
     id: 'oak',
     name: 'Roble ahumado',
-    img: '/assets/mat-oak.jpg',
+    img: A + 'mat-oak.jpg',
     swatch: ['#3a2f27', '#6f6a63'],
     cabinets: 'Roble ahumado',
     stone: 'Cuarcita grafito',
@@ -22,7 +25,7 @@ const MATERIALS = [
   {
     id: 'ivory',
     name: 'Marfil & Calacatta',
-    img: '/assets/mat-ivory.jpg',
+    img: A + 'mat-ivory.jpg',
     swatch: ['#e9e1d3', '#f4f1ec'],
     cabinets: 'Laca marfil mate',
     stone: 'Mármol Calacatta',
@@ -31,7 +34,7 @@ const MATERIALS = [
   {
     id: 'graphite',
     name: 'Grafito & Nero',
-    img: '/assets/mat-graphite.jpg',
+    img: A + 'mat-graphite.jpg',
     swatch: ['#26292b', '#121212'],
     cabinets: 'Grafito texturizado',
     stone: 'Nero Marquina',
@@ -65,32 +68,32 @@ const STEPS = [
 
 const PROJECTS = [
   {
-    title: 'Apartamento Rosales', place: 'Bogotá', type: 'Apartamento', img: '/assets/portfolio-1.jpg',
+    title: 'Apartamento Rosales', place: 'Bogotá', type: 'Apartamento', img: A + 'portfolio-1.jpg',
     area: '18 m²', weeks: '7 semanas', year: 2025, materials: 'Laca blanca mate · Roble blanco · Calacatta',
     text: 'Una cocina sin tiradores para un apartamento de líneas limpias. La isla de roble blanco funciona como barra de desayuno y oculta el almacenamiento de diario.',
   },
   {
-    title: 'Casa del Valle', place: 'Sopó', type: 'Casa', img: '/assets/portfolio-2.jpg',
+    title: 'Casa del Valle', place: 'Sopó', type: 'Casa', img: A + 'portfolio-2.jpg',
     area: '32 m²', weeks: '9 semanas', year: 2025, materials: 'Laca verde salvia · Bloque de nogal · Zellige',
     text: 'Restauramos las vigas originales y diseñamos gabinetes shaker en verde salvia. La isla de bloque de nogal es el centro de una casa donde siempre hay alguien cocinando.',
   },
   {
-    title: 'Penthouse Altos', place: 'Medellín', type: 'Penthouse', img: '/assets/portfolio-3.jpg',
+    title: 'Penthouse Altos', place: 'Medellín', type: 'Penthouse', img: A + 'portfolio-3.jpg',
     area: '28 m²', weeks: '8 semanas', year: 2024, materials: 'Grafito · Nero Marquina · Acero negro',
     text: 'Una isla monolítica de Nero Marquina frente a la ciudad. Todo lo técnico queda escondido en una pared de columnas para que la vista sea la protagonista.',
   },
   {
-    title: 'Casa Guaymaral', place: 'Chía', type: 'Casa', img: '/assets/portfolio-4.jpg',
+    title: 'Casa Guaymaral', place: 'Chía', type: 'Casa', img: A + 'portfolio-4.jpg',
     area: '40 m²', weeks: '10 semanas', year: 2024, materials: 'Nogal · Cuarcita clara · Roble natural',
     text: 'Cocina, comedor y jardín en un solo espacio abierto para una familia de cinco. La isla tiene cuatro puestos y una zona de cajones para los niños.',
   },
   {
-    title: 'Estudio Chapinero', place: 'Bogotá', type: 'Apartamento', img: '/assets/portfolio-5.jpg',
+    title: 'Estudio Chapinero', place: 'Bogotá', type: 'Apartamento', img: A + 'portfolio-5.jpg',
     area: '12 m²', weeks: '6 semanas', year: 2025, materials: 'Roble ahumado · Terrazo marfil · Níquel',
     text: 'Una cocina tipo pasillo donde cada centímetro trabaja. El tragaluz y el terrazo claro hacen que un espacio de 12 m² se sienta amplio.',
   },
   {
-    title: 'Villa Alba', place: 'Barichara', type: 'Villa', img: '/assets/portfolio-6.jpg',
+    title: 'Villa Alba', place: 'Barichara', type: 'Villa', img: A + 'portfolio-6.jpg',
     area: '35 m²', weeks: '10 semanas', year: 2023, materials: 'Laca marfil · Travertino · Terracota',
     text: 'Una casa de descanso con alma mediterránea. Travertino en encimeras y salpicadero, piso de terracota artesanal y una ventana en arco sobre el fregadero.',
   },
@@ -278,7 +281,7 @@ export default function App() {
         <section className={`hero ${built ? 'is-built' : ''}`} ref={heroRef}>
           <div className="hero__sticky">
             <div className="hero__stage">
-              <img src="/assets/hero-empty.jpg" alt="Espacio vacío antes de la cocina" className="hero__img hero__empty" />
+              <img src={A + 'hero-empty.jpg'} alt="Espacio vacío antes de la cocina" className="hero__img hero__empty" />
               <div className="hero__kitchen" ref={stageRef}>
                 {MATERIALS.map((m) => (
                   <img
