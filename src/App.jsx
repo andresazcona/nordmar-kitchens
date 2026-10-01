@@ -296,13 +296,13 @@ export default function App() {
             <div className="hero__shade" />
 
             <div className="hero__intro">
-              <p className="eyebrow load" style={{ '--w': 0 }}>Cocinas a medida · Taller propio</p>
+              <p className="eyebrow load" style={{ '--w': 0 }}>Ebanistería de autor · Desde 2014</p>
               <h1 className="split load">
-                {['Desliza', 'para', 'armar', 'la', 'cocina'].map((w, i) => (
+                {['Todo', 'empieza', 'en', 'el', 'vacío.'].map((w, i) => (
                   <span className="mask" key={w}><span style={{ '--w': i + 1 }}>{w}</span></span>
                 ))}
               </h1>
-              <p className="hero__sub load" style={{ '--w': 7 }}>Cada pieza se diseña para tu espacio. Nada de catálogo.</p>
+              <p className="hero__sub load" style={{ '--w': 7 }}>Desliza y mira cómo cada pieza encuentra su lugar.</p>
             </div>
 
             <div className="hero__meter">
@@ -312,9 +312,9 @@ export default function App() {
             </div>
 
             <div className="hero__built">
-              <p className="eyebrow">Configurador en vivo</p>
+              <p className="eyebrow">Elige tu materia</p>
               <h2 className="split">
-                {['Hecha', 'a', 'tu', 'medida.'].map((w, i) => (
+                {['Cada', 'veta,', 'en', 'su', 'lugar.'].map((w, i) => (
                   <span className="mask" key={w}><span style={{ '--w': i }}>{w}</span></span>
                 ))}
               </h2>
