@@ -392,6 +392,21 @@ p.load { animation: fadeUp 1s var(--ease) both; animation-delay: calc(0.2s + var
   font-size: 0.8rem;
 }
 .footer .logo { color: var(--ink); }
+.credit {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+.credit p { margin: 0; font-size: 0.9rem; }
+.credit strong { color: var(--ink); font-weight: 500; }
+.btn--gh { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--ink); color: var(--bg); }
+.btn--gh:hover { background: #000; }
 
 /* ---------- CLICKABLE CARDS ---------- */
 .card { display: block; width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer; }
